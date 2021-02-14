@@ -53,7 +53,7 @@ class BigQueryReadFromQueryWithBigQueryStorageAPI {
         "  array_field,\n" +
         "  struct_field\n" +
         "FROM\n" +
-        "  `%s:%s.%s`", project, dataset, table)
+        "  `%s.%s.%s`", project, dataset, table)
     */
 
     PCollection<MyData> rows =

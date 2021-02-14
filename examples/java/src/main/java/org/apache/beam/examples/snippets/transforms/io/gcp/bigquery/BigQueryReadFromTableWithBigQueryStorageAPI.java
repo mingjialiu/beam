@@ -43,7 +43,7 @@ class BigQueryReadFromTableWithBigQueryStorageAPI {
             .apply(
                 "Read from BigQuery table",
                 BigQueryIO.readTableRows()
-                    .from(String.format("%s:%s.%s", project, dataset, table))
+                    .from(String.format("%s.%s.%s", project, dataset, table))
                     .withMethod(Method.DIRECT_READ)
                     .withSelectedFields(
                         Arrays.asList(
